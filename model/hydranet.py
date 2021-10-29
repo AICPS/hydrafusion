@@ -4,8 +4,8 @@ import torch.nn.functional as F
 from .branch import RadarBranch, CameraBranch, LidarBranch, DualCameraFusionBranch, CameraLidarFusionBranch, RadarLidarFusionBranch, ResNetTail
 from .stem import RadarStem, CameraStem, LidarStem
 from .fusion import FusionBlock
-from local_torchvision.models.resnet import BasicBlock
-from local_torchvision.models.detection.transform import GeneralizedRCNNTransform
+from torchvision.models.resnet import BasicBlock
+from torchvision.models.detection.transform import GeneralizedRCNNTransform
 from typing import List
 
 

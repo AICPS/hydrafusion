@@ -1,4 +1,4 @@
-from local_torchvision.models.resnet import ResNet, BasicBlock, Bottleneck, load_state_dict_from_url
+from torchvision.models.resnet import ResNet, BasicBlock, Bottleneck, load_state_dict_from_url
 from typing import Type, Union, List
 
 '''Represents the Stem block in the HydraNet. Backbone is ResNet-18'''

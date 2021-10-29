@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
-from local_torchvision.models.resnet import ResNet, BasicBlock, Bottleneck, load_state_dict_from_url
-from local_torchvision.models.detection import FasterRCNN
-from local_torchvision.models.detection.anchor_utils import AnchorGenerator
+from torchvision.models.resnet import ResNet, BasicBlock, Bottleneck, load_state_dict_from_url
+from torchvision.models.detection import FasterRCNN
+from torchvision.models.detection.anchor_utils import AnchorGenerator
 from collections import OrderedDict
 from typing import List, Union, Type
 from torchvision.ops import MultiScaleRoIAlign
