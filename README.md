@@ -4,6 +4,8 @@ Code for our paper titled _**"HydraFusion: Context-Aware Selective Sensor Fusion
 This repository contains the algorithmic implementation of our HydraFusion model. 
 Our model is intended to be used with the RADIATE dataset available here: https://pro.hw.ac.uk/radiate/
 
+## Model
+
 **hydranet.py** -- contains the class HydraFusion, which defines our top-level model specification.
 
 **stem.py** -- defines the stem modules in HydraFusion
@@ -17,3 +19,6 @@ Our model is intended to be used with the RADIATE dataset available here: https:
 
 The stems and branches are built using a split architecture implementation of Faster R-CNN with a ResNet-18 backbone.
 HydraFusion can be used with any image-based multi-modal dataset. In our evaluations we used two cameras, one radar sensor, and one lidar sensor as inputs to the model.
+
+## Requirements
+PyTorch 1.9
