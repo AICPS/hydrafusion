@@ -24,7 +24,7 @@ class FusionBlock(nn.Module):
         self.fusion_type = fusion_type
         self.alpha = alpha
 
-
+    ''' Function from the RADIATE SDK'''
     def transform(self, LidarToCamR, LidarToCamT):
         Rx = self.RX(LidarToCamR)
         Ry = self.RY(LidarToCamR)
@@ -41,7 +41,7 @@ class FusionBlock(nn.Module):
                                [LidarToCamT[0], LidarToCamT[1], LidarToCamT[2], 1.0]]).T
         return LidarToCam
 
-
+    ''' Function from the RADIATE SDK'''
     def RX(self, LidarToCamR):
         thetaX = np.deg2rad(LidarToCamR[0])
         Rx = np.array([[1, 0, 0],
@@ -49,7 +49,7 @@ class FusionBlock(nn.Module):
                        [0, np.sin(thetaX), np.cos(thetaX)]]).astype(np.float)
         return Rx
 
-
+    ''' Function from the RADIATE SDK'''
     def RY(self, LidarToCamR):
         thetaY = np.deg2rad(LidarToCamR[1])
         Ry = np.array([[np.cos(thetaY), 0, np.sin(thetaY)],
@@ -57,7 +57,7 @@ class FusionBlock(nn.Module):
                        [-np.sin(thetaY), 0, np.cos(thetaY)]])
         return Ry
 
-
+    ''' Function from the RADIATE SDK'''
     def RZ(self, LidarToCamR):
         thetaZ = np.deg2rad(LidarToCamR[2])
         Rz = np.array([[np.cos(thetaZ), -np.sin(thetaZ), 0],
@@ -65,8 +65,8 @@ class FusionBlock(nn.Module):
                        [0, 0, 1]]).astype(np.float)
         return Rz
     
-
-    """
+    ''' Function from the RADIATE SDK'''
+    """ 
     method to project the bounding boxes to the camera
         :param annotations: the annotations for the current frame
         :type annotations: list
@@ -107,7 +107,7 @@ class FusionBlock(nn.Module):
 
         return bboxes_3d
 
-
+    ''' Function from the RADIATE SDK'''
     def __get_projected_bbox(self, bb, rotation, cameraMatrix, extrinsic, obj_height=2):
         """get the projected boundinb box to some camera sensor
         """
