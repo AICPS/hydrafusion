@@ -1,5 +1,5 @@
 # HydraFusion
-Code for our paper titled _**"HydraFusion: Context-Aware Selective Sensor Fusion for Robust and Efficient Autonomous Vehicle Perception"**_
+Code for our paper titled _**"HydraFusion: Context-Aware Selective Sensor Fusion for Robust and Efficient Autonomous Vehicle Perception,"**_ accepted to be published in **ICCPS 2022.**
 
 This repository contains the algorithmic implementation of our HydraFusion model. 
 Our model is intended to be used with the RADIATE dataset available here: https://pro.hw.ac.uk/radiate/
